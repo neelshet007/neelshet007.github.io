@@ -110,7 +110,7 @@ export default function Hero() {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           <a
-            href="https://drive.google.com/file/d/10iqJI4yXiokJzF7qaVsJt1TWECFwFpHO/view?usp=sharing"
+            href="https://drive.google.com/file/d/1kWKpaEINogDmFaE3XjiciYg5DXZydjh7/view?usp=sharing"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent hover:bg-accent/80 text-white font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(124,58,237,0.4)] hover:-translate-y-0.5"
           >
             <FileDown className="w-5 h-5" />
