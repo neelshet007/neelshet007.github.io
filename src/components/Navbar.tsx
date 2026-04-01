@@ -54,7 +54,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://drive.google.com/file/d/10iqJI4yXiokJzF7qaVsJt1TWECFwFpHO/view?usp=sharing"
+            href="https://drive.google.com/file/d/1kWKpaEINogDmFaE3XjiciYg5DXZydjh7/view?usp=sharing"
             className="text-sm px-4 py-2 rounded-lg bg-accent/10 text-accent-light border border-accent/20 hover:bg-accent/20 transition-all duration-200"
           >
             Resume
