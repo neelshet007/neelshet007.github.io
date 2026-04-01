@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram, FileDown, Heart } from "lucide-react";
 
 const links = [
-  { icon: FileDown, href: "https://drive.google.com/file/d/1kWKpaEINogDmFaE3XjiciYg5DXZydjh7/view?usp=sharing", label: "Resume" },
+  { icon: FileDown, href: "https://drive.google.com/file/d/1kWKpaEINogDmFaE3XjiciYg5DXZydjh7/view", label: "Resume" },
   { icon: Github, href: "https://github.com/neelshet007", label: "GitHub" },
   {
     icon: Linkedin,
