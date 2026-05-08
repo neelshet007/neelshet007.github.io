@@ -25,37 +25,39 @@ const projects: Project[] = [
     description:
       "A full-stack health-tech platform connecting donors, patients, hospitals, and blood banks in real time, with intelligent blood matching and mission-critical synchronization.",
     tags: ["Next.js", "Node.js", "MongoDB", "Real-time WebSockets"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/neelshet007/lifelink",
+    live: "https://github.com/neelshet007/lifelink",
     gradient: "from-red-600/20 to-rose-600/20",
+  },
+   {
+    title: "MedTech E-Commerce",
+    description:
+      "A robust medical supply chain platform with role-based access for admins and patients, Razorpay payments, n8n automation for AI prescription analysis, and a Dockerized architecture prepared for AWS deployment.",
+    tags: ["Next.js", "n8n", "Razorpay", "Docker", "AWS"],
+    github: "https://github.com/neelshet007/medtech",
+    live: "https://github.com/neelshet007/medtech",
+    gradient: "from-cyan-600/20 to-blue-600/20",
+  },
+    {
+    title: "VideoTube Backend",
+    description:
+      "A production-ready MERN backend for video sharing with JWT access and refresh token flows, bcrypt hashing, Cloudinary storage, Multer-based file staging, and optimized MongoDB aggregation pipelines.",
+    tags: ["Node.js", "Express", "MongoDB", "Cloudinary", "JWT"],
+    github: "https://github.com/neelshet007/videoapp",
+    live: "https://github.com/neelshet007/videoapp",
+    gradient: "from-emerald-600/20 to-teal-600/20",
   },
   {
     title: "Moodflix",
     description:
       "A cinematic React application integrated with Appwrite, featuring a custom recommendation engine driven by user sentiment and mood analysis.",
     tags: ["React", "Appwrite", "Recommendation Logic"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/neelshet007/mood-flix",
+    live: "https://github.com/neelshet007/mood-flix",
     gradient: "from-indigo-600/20 to-sky-600/20",
   },
-  {
-    title: "VideoTube Backend",
-    description:
-      "A production-ready MERN backend for video sharing with JWT access and refresh token flows, bcrypt hashing, Cloudinary storage, Multer-based file staging, and optimized MongoDB aggregation pipelines.",
-    tags: ["Node.js", "Express", "MongoDB", "Cloudinary", "JWT"],
-    github: "#",
-    live: "#",
-    gradient: "from-emerald-600/20 to-teal-600/20",
-  },
-  {
-    title: "MedTech E-Commerce",
-    description:
-      "A robust medical supply chain platform with role-based access for admins and patients, Razorpay payments, n8n automation for AI prescription analysis, and a Dockerized architecture prepared for AWS deployment.",
-    tags: ["Next.js", "n8n", "Razorpay", "Docker", "AWS"],
-    github: "#",
-    live: "#",
-    gradient: "from-cyan-600/20 to-blue-600/20",
-  },
+
+ 
 ];
 
 function TiltCard({
