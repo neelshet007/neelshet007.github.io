@@ -2,9 +2,9 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { WhatIBuild } from "@/components/WhatIBuild";
+import { SkillsExpertise } from "@/components/SkillsExpertise";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { EducationSection } from "@/components/EducationSection";
-import { SkillsExpertise } from "@/components/SkillsExpertise";
 import { NexScaleCTA } from "@/components/NexScaleCTA";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
@@ -24,14 +24,14 @@ export default function Home() {
       {/* What I Build Minimal Focus Cards */}
       <WhatIBuild />
 
+      {/* Skills & Technologies Categorized Grid (Moved ABOVE Projects) */}
+      <SkillsExpertise />
+
       {/* Featured Projects Case Studies */}
       <ProjectsSection />
 
       {/* Modern Education Section */}
       <EducationSection />
-
-      {/* Skills & Technologies Categorized Grid */}
-      <SkillsExpertise />
 
       {/* NexScale CTA Bridge */}
       <NexScaleCTA />

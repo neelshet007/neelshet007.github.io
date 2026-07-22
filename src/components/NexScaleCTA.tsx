@@ -54,7 +54,7 @@ export const NexScaleCTA: React.FC = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
             <a
-              href="https://nexscale.in"
+              href={portfolioConfig.links.nexscale}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#FF7A2F] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#FF7A2F]/30 hover:bg-[#FF7A2F]/90 hover:scale-105 transition-all duration-200"

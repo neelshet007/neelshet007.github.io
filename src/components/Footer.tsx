@@ -40,16 +40,19 @@ export const Footer: React.FC = () => {
                 <a href="#about" className="hover:text-[#FF7A2F] transition-colors">About</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#FF7A2F] transition-colors">Services ({portfolioConfig.agencyName})</a>
+                <a href={portfolioConfig.links.nexscale} target="_blank" rel="noopener noreferrer" className="hover:text-[#FF7A2F] transition-colors">{portfolioConfig.agencyName}</a>
               </li>
               <li>
                 <a href="#skills" className="hover:text-[#FF7A2F] transition-colors">Skills &amp; Expertise</a>
               </li>
               <li>
+                <a href="#projects" className="hover:text-[#FF7A2F] transition-colors">Featured Projects</a>
+              </li>
+              <li>
                 <a href="#contact" className="hover:text-[#FF7A2F] transition-colors">Contact</a>
               </li>
               <li>
-                <a href="#resume" className="hover:text-[#FF7A2F] transition-colors">Resume</a>
+                <a href={portfolioConfig.links.resume} target="_blank" rel="noopener noreferrer" className="hover:text-[#FF7A2F] transition-colors">Resume</a>
               </li>
             </ul>
           </div>
