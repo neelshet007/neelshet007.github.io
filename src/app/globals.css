@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #ffffff;
-  --color-foreground: #111111;
+  --color-background: #0B0F17;
+  --color-foreground: #F3F4F6;
   --color-primary: #FF7A2F;
-  --color-secondary: #111111;
+  --color-secondary: #111827;
   --color-accent: #FF7A2F;
   --color-accent-light: #FF9454;
-  --color-accent-glow: rgba(255, 122, 47, 0.25);
-  --color-card: #ffffff;
-  --color-border-light: #E5E7EB;
-  --color-text-muted: #6B7280;
+  --color-accent-glow: rgba(255, 122, 47, 0.2);
+  --color-card: #111827;
+  --color-border-light: #1F2937;
+  --color-text-muted: #9CA3AF;
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-heading: var(--font-sora), system-ui, sans-serif;
 }
@@ -36,13 +36,13 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #ffffff;
-  color: #111111;
+  background-color: #0B0F17;
+  color: #F3F4F6;
 }
 
 body {
-  background-color: #ffffff;
-  color: #111111;
+  background-color: #0B0F17;
+  color: #F3F4F6;
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
 }
@@ -53,18 +53,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ─── Floating Navbar Glass Effect ───────────────────────────── */
 .nav-glass {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(17, 24, 39, 0.85);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 .dark-glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ─── Animations ────────────────────────────────────────────── */

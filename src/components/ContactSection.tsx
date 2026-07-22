@@ -29,7 +29,7 @@ export const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative bg-white text-[#111111] py-20 sm:py-28 border-t border-gray-100 overflow-hidden"
+      className="relative bg-[#0F141F] text-[#F3F4F6] py-20 sm:py-28 border-t border-gray-800 overflow-hidden"
     >
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -49,7 +49,7 @@ export const ContactSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mt-2 text-3xl sm:text-5xl font-black text-[#111111] tracking-tight"
+              className="mt-2 text-3xl sm:text-5xl font-black text-white tracking-tight"
             >
               Let&apos;s Build Something Scalable
             </motion.h2>
@@ -59,43 +59,43 @@ export const ContactSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mt-4 text-gray-600 text-base sm:text-lg leading-relaxed font-normal"
+              className="mt-4 text-gray-400 text-base sm:text-lg leading-relaxed font-normal"
             >
               Have a project in mind, need cloud infrastructure automation, or want to integrate AI solutions into your business? Send a message and let&apos;s connect directly on WhatsApp.
             </motion.p>
 
             {/* Meta Cards */}
             <div className="mt-8 space-y-4">
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-200/80">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#111827] border border-gray-800">
                 <div className="p-3 rounded-xl bg-[#FF7A2F]/10 text-[#FF7A2F]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-xs uppercase tracking-wider text-gray-400 font-bold">Locations</h4>
-                  <p className="text-sm font-bold text-[#111111]">
+                  <p className="text-sm font-bold text-white">
                     {portfolioConfig.locations.primary} <span className="text-[#FF7A2F]">↕</span> {portfolioConfig.locations.secondary}
                   </p>
-                  <p className="text-xs text-gray-500 mt-0.5">{portfolioConfig.locations.note}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{portfolioConfig.locations.note}</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-200/80">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#111827] border border-gray-800">
                 <div className="p-3 rounded-xl bg-[#FF7A2F]/10 text-[#FF7A2F]">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-xs uppercase tracking-wider text-gray-400 font-bold">Response Time</h4>
-                  <p className="text-sm font-bold text-[#111111]">Within 2 to 4 hours</p>
+                  <p className="text-sm font-bold text-white">Within 2 to 4 hours</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-200/80">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#111827] border border-gray-800">
                 <div className="p-3 rounded-xl bg-[#FF7A2F]/10 text-[#FF7A2F]">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-xs uppercase tracking-wider text-gray-400 font-bold">Availability</h4>
-                  <p className="text-sm font-bold text-[#111111]">Open for Remote &amp; Enterprise Consultations</p>
+                  <p className="text-sm font-bold text-white">Open for Remote &amp; Enterprise Consultations</p>
                 </div>
               </div>
             </div>
@@ -107,16 +107,16 @@ export const ContactSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-xl shadow-black/5"
+            className="p-8 sm:p-10 rounded-3xl bg-[#111827] border border-gray-800 shadow-2xl"
           >
             <div className="flex items-center gap-2 mb-6 text-[#FF7A2F]">
               <MessageSquare className="w-5 h-5" />
-              <h3 className="text-xl font-bold text-[#111111]">Direct WhatsApp Message</h3>
+              <h3 className="text-xl font-bold text-white">Direct WhatsApp Message</h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">
+                <label className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">
                   Full Name *
                 </label>
                 <input
@@ -125,12 +125,12 @@ export const ContactSection: React.FC = () => {
                   placeholder="e.g. John Doe"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#111111] focus:bg-white focus:border-[#FF7A2F] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:border-[#FF7A2F] focus:outline-none transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">
+                <label className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">
                   Email Address
                 </label>
                 <input
@@ -138,12 +138,12 @@ export const ContactSection: React.FC = () => {
                   placeholder="john@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#111111] focus:bg-white focus:border-[#FF7A2F] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:border-[#FF7A2F] focus:outline-none transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">
+                <label className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">
                   Phone Number
                 </label>
                 <input
@@ -151,12 +151,12 @@ export const ContactSection: React.FC = () => {
                   placeholder="+91 9876543210"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#111111] focus:bg-white focus:border-[#FF7A2F] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:border-[#FF7A2F] focus:outline-none transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">
+                <label className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">
                   Message *
                 </label>
                 <textarea
@@ -165,7 +165,7 @@ export const ContactSection: React.FC = () => {
                   placeholder="I would like to discuss a project with you..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#111111] focus:bg-white focus:border-[#FF7A2F] focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-white placeholder-gray-500 focus:border-[#FF7A2F] focus:outline-none transition-colors resize-none"
                 />
               </div>
 

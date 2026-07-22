@@ -49,17 +49,17 @@ export const SocialProofGrid: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 * idx }}
               whileHover={{ y: -4, scale: 1.02 }}
-              className="group flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-gray-200/90 shadow-md shadow-black/5 hover:border-[#FF7A2F]/50 hover:shadow-lg transition-all duration-300"
+              className="group flex items-center justify-between px-4 py-3 rounded-2xl bg-[#111827] border border-gray-800 shadow-lg shadow-black/20 hover:border-[#FF7A2F]/50 hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-xl bg-[#FF7A2F]/10 text-[#FF7A2F] flex items-center justify-center group-hover:bg-[#FF7A2F] group-hover:text-white transition-colors duration-300">
                   {iconMap[item.iconName]}
                 </div>
-                <span className="text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#FF7A2F] transition-colors">
+                <span className="text-xs sm:text-sm font-bold text-gray-200 group-hover:text-[#FF7A2F] transition-colors">
                   {item.name}
                 </span>
               </div>
-              <ArrowUpRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#FF7A2F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#FF7A2F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </motion.a>
           ))}
         </div>
@@ -76,17 +76,17 @@ export const SocialProofGrid: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 + 0.1 * idx }}
               whileHover={{ y: -4, scale: 1.02 }}
-              className="group flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-gray-200/90 shadow-md shadow-black/5 hover:border-[#FF7A2F]/50 hover:shadow-lg transition-all duration-300"
+              className="group flex items-center justify-between px-4 py-3 rounded-2xl bg-[#111827] border border-gray-800 shadow-lg shadow-black/20 hover:border-[#FF7A2F]/50 hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-xl bg-[#FF7A2F]/10 text-[#FF7A2F] flex items-center justify-center group-hover:bg-[#FF7A2F] group-hover:text-white transition-colors duration-300">
                   {iconMap[item.iconName]}
                 </div>
-                <span className="text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#FF7A2F] transition-colors">
+                <span className="text-xs sm:text-sm font-bold text-gray-200 group-hover:text-[#FF7A2F] transition-colors">
                   {item.name}
                 </span>
               </div>
-              <ArrowUpRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#FF7A2F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-[#FF7A2F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </motion.a>
           ))}
         </div>

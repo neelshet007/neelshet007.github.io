@@ -65,7 +65,7 @@ export const SkillsExpertise: React.FC = () => {
   return (
     <section
       id="skills"
-      className="relative bg-white text-[#111111] py-20 sm:py-28 overflow-hidden border-t border-gray-100"
+      className="relative bg-[#0B0F17] text-[#F3F4F6] py-20 sm:py-28 overflow-hidden border-t border-gray-800"
     >
       <Container className="relative z-10">
         {/* Header */}
@@ -84,7 +84,7 @@ export const SkillsExpertise: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-2 text-3xl sm:text-5xl font-black text-[#111111] tracking-tight"
+            className="mt-2 text-3xl sm:text-5xl font-black text-white tracking-tight"
           >
             Skills &amp; Technologies
           </motion.h2>
@@ -94,7 +94,7 @@ export const SkillsExpertise: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed"
+            className="mt-4 text-gray-400 text-sm sm:text-base leading-relaxed"
           >
             Technologies and tools I use to design, build, deploy, and automate software projects.
           </motion.p>
@@ -110,13 +110,13 @@ export const SkillsExpertise: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -5 }}
-              className="p-8 rounded-3xl bg-white border border-gray-200/90 shadow-md shadow-black/5 hover:border-[#FF7A2F]/50 hover:shadow-xl transition-all duration-300"
+              className="p-8 rounded-3xl bg-[#111827] border border-gray-800 shadow-xl shadow-black/20 hover:border-[#FF7A2F]/50 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-2xl bg-[#FF7A2F]/10 text-[#FF7A2F] flex items-center justify-center shadow-sm">
                   {category.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#111111]">
+                <h3 className="text-xl sm:text-2xl font-bold text-white">
                   {category.title}
                 </h3>
               </div>
@@ -125,7 +125,7 @@ export const SkillsExpertise: React.FC = () => {
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3.5 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-xs sm:text-sm font-semibold text-[#111111] hover:bg-[#FF7A2F]/10 hover:border-[#FF7A2F]/30 hover:text-[#FF7A2F] transition-all"
+                    className="px-3.5 py-1.5 rounded-full bg-gray-800/80 border border-gray-700 text-xs sm:text-sm font-semibold text-gray-200 hover:bg-[#FF7A2F]/20 hover:border-[#FF7A2F]/40 hover:text-[#FF7A2F] transition-all"
                   >
                     {skill}
                   </span>

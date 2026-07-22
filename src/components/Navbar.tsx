@@ -34,10 +34,10 @@ export const Navbar: React.FC = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-4 sm:top-6 inset-x-0 z-50 flex justify-center px-4"
     >
-      {/* Floating Pill Container - Dark Black #111111 Background matching reference */}
+      {/* Floating Pill Container - Dark #111827 Background */}
       <div
-        className={`w-full max-w-5xl flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-[#111111] text-white shadow-2xl border border-white/10 backdrop-blur-md transition-all duration-300 ${
-          scrolled ? "shadow-black/40 border-white/20" : "shadow-black/20"
+        className={`w-full max-w-5xl flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-[#111827]/90 text-white shadow-2xl border border-white/10 backdrop-blur-md transition-all duration-300 ${
+          scrolled ? "shadow-black/60 border-white/20" : "shadow-black/40"
         }`}
       >
         {/* Left Side Active Home Pill / Brand Logo */}
@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Center Navigation Links for Desktop & Tablet */}
+        {/* Center Navigation Links */}
         <nav className="hidden md:flex items-center gap-1 sm:gap-2">
           {navItems.slice(1, -1).map((item) => {
             const isActive = activeTab === item.name;
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
                 href={item.href}
                 onClick={() => setActiveTab(item.name)}
                 className={`relative px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors duration-200 ${
-                  isActive ? "text-white font-semibold" : "text-gray-300 hover:text-white"
+                  isActive ? "text-white font-semibold" : "text-gray-400 hover:text-white"
                 }`}
               >
                 {isActive && (
@@ -78,7 +78,7 @@ export const Navbar: React.FC = () => {
           })}
         </nav>
 
-        {/* Center Brand Badge (Logo in Middle - JCREA style initialized to Neel) */}
+        {/* Center Brand Badge */}
         <div className="hidden lg:flex items-center gap-2 font-extrabold tracking-wider text-base">
           <span className="w-8 h-8 rounded-full bg-[#FF7A2F] text-white flex items-center justify-center text-xs font-black shadow-inner">
             {portfolioConfig.initials}
@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
             href="#contact"
             onClick={() => setActiveTab("Contact")}
             className={`relative px-5 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors duration-200 ${
-              activeTab === "Contact" ? "text-white" : "text-gray-300 hover:text-white"
+              activeTab === "Contact" ? "text-white" : "text-gray-400 hover:text-white"
             }`}
           >
             {activeTab === "Contact" && (
@@ -126,7 +126,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-16 left-4 right-4 bg-[#111111] border border-white/15 rounded-3xl p-6 shadow-2xl md:hidden z-50 flex flex-col gap-3"
+            className="absolute top-16 left-4 right-4 bg-[#111827] border border-white/15 rounded-3xl p-6 shadow-2xl md:hidden z-50 flex flex-col gap-3"
           >
             <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-1">
               <div className="flex items-center gap-2">
