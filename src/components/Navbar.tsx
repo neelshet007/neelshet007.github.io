@@ -8,8 +8,8 @@ import { portfolioConfig } from "@/config/portfolioConfig";
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
   { name: "Services", href: "#services" },
-  { name: "Resume", href: "#resume" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Center Navigation Links */}
+        {/* Center Navigation Links: About, Skills, Services, Projects */}
         <nav className="hidden md:flex items-center gap-1 sm:gap-2">
           {navItems.slice(1, -1).map((item) => {
             const isActive = activeTab === item.name;
