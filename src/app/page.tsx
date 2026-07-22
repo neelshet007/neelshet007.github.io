@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { WhatIBuild } from "@/components/WhatIBuild";
 import { ProjectsSection } from "@/components/ProjectsSection";
+import { EducationSection } from "@/components/EducationSection";
 import { SkillsExpertise } from "@/components/SkillsExpertise";
 import { NexScaleCTA } from "@/components/NexScaleCTA";
 import { ContactSection } from "@/components/ContactSection";
@@ -14,7 +15,7 @@ export default function Home() {
       {/* Floating Header Navbar */}
       <Navbar />
 
-      {/* Hero Section + 8 Social Platform Grid */}
+      {/* Hero Section + 6 Social Platform Grid */}
       <Hero />
 
       {/* About Me Section */}
@@ -23,8 +24,11 @@ export default function Home() {
       {/* What I Build Minimal Focus Cards */}
       <WhatIBuild />
 
-      {/* Featured Projects Case Studies (Alternating Layout) */}
+      {/* Featured Projects Case Studies */}
       <ProjectsSection />
+
+      {/* Modern Education Section */}
+      <EducationSection />
 
       {/* Skills & Technologies Categorized Grid */}
       <SkillsExpertise />
