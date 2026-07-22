@@ -9,8 +9,9 @@ const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Services", href: "#services" },
   { name: "Projects", href: "#projects" },
+  { name: "Education", href: "#education" },
+  { name: "Services", href: "#services" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -52,7 +53,7 @@ export const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Center Navigation Links: About, Skills, Services, Projects */}
+        {/* Center Navigation Links: About, Skills, Projects, Education, Services */}
         <nav className="hidden md:flex items-center gap-1 sm:gap-2">
           {navItems.slice(1, -1).map((item) => {
             const isActive = activeTab === item.name;
@@ -61,7 +62,7 @@ export const Navbar: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setActiveTab(item.name)}
-                className={`relative px-4 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors duration-200 ${
+                className={`relative px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors duration-200 ${
                   isActive ? "text-white font-semibold" : "text-gray-400 hover:text-white"
                 }`}
               >
