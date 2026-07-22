@@ -1,25 +1,24 @@
 @import "tailwindcss";
 
-/* ─── Custom Theme Tokens ───────────────────────────────────── */
 @theme inline {
-  --color-background: #050510;
-  --color-foreground: #e4e4f0;
-  --color-accent: #7c3aed;
-  --color-accent-light: #a78bfa;
-  --color-accent-glow: rgba(124, 58, 237, 0.35);
-  --color-glass: rgba(255, 255, 255, 0.04);
-  --color-glass-border: rgba(255, 255, 255, 0.08);
-  --color-glass-hover: rgba(255, 255, 255, 0.08);
-  --color-muted: #8b8ba3;
-  --color-surface: #0c0c1d;
-  --font-sans: var(--font-outfit);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+  --color-primary: #FF7A2F;
+  --color-secondary: #111111;
+  --color-accent: #FF7A2F;
+  --color-accent-light: #FF9454;
+  --color-accent-glow: rgba(255, 122, 47, 0.25);
+  --color-card: #ffffff;
+  --color-border-light: #E5E7EB;
+  --color-text-muted: #6B7280;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-sora), system-ui, sans-serif;
 }
 
-/* ─── Base ──────────────────────────────────────────────────── */
+/* ─── Base Styles ────────────────────────────────────────────── */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-accent) transparent;
+  scrollbar-color: #FF7A2F transparent;
 }
 
 *::-webkit-scrollbar {
@@ -31,99 +30,68 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
-  border-radius: 3px;
+  background: #FF7A2F;
+  border-radius: 9999px;
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #ffffff;
+  color: #111111;
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
 }
 
-::selection {
-  background: var(--color-accent);
-  color: #fff;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sora), sans-serif;
 }
 
-/* ─── Glass Utility Class ───────────────────────────────────── */
-.glass {
-  background: var(--color-glass);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
-  border: 1px solid var(--color-glass-border);
-  border-radius: 1rem;
+/* ─── Floating Navbar Glass Effect ───────────────────────────── */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
 }
 
-.glass:hover {
-  background: var(--color-glass-hover);
-  border-color: rgba(255, 255, 255, 0.12);
+.dark-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ─── Glow Effect ───────────────────────────────────────────── */
-.glow {
-  box-shadow: 0 0 20px var(--color-accent-glow),
-    0 0 60px rgba(124, 58, 237, 0.1);
-}
-
-.glow-text {
-  text-shadow: 0 0 30px var(--color-accent-glow);
-}
-
-/* ─── Gradient text utility ─────────────────────────────────── */
-.gradient-text {
-  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 50%, #6d28d9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* ─── Floating animation ────────────────────────────────────── */
+/* ─── Animations ────────────────────────────────────────────── */
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotateX(0deg);
+  0%, 100% {
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px) rotateX(5deg);
+    transform: translateY(-8px);
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
-/* ─── Pulse glow ────────────────────────────────────────────── */
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px var(--color-accent-glow);
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 40px var(--color-accent-glow),
-      0 0 80px rgba(124, 58, 237, 0.15);
+    opacity: 1;
+    transform: scale(1.03);
   }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-/* ─── Spin slow ─────────────────────────────────────────────── */
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
 }

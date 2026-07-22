@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // If deploying to a subpath on GitHub Pages (e.g. /portfolio),
-  // uncomment and set this:
-  // basePath: "/portfolio",
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 export default nextConfig;

@@ -1,72 +1,89 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, FileDown, Heart } from "lucide-react";
+import React from "react";
+import { Container } from "./Container";
+import { portfolioConfig } from "@/config/portfolioConfig";
+import { MapPin } from "lucide-react";
 
-const links = [
-  { icon: FileDown, href: "https://drive.google.com/file/d/1kWKpaEINogDmFaE3XjiciYg5DXZydjh7/view", label: "Resume" },
-  { icon: Github, href: "https://github.com/neelshet007", label: "GitHub" },
-  {
-    icon: Linkedin,
-    href: "https://linkedin.com/in/neelsheth2007",
-    label: "LinkedIn",
-  },
-  {
-    icon: Instagram,
-    href: "https://instagram.com/neel_sheth2007",
-    label: "Instagram",
-  },
-];
-
-export default function Footer() {
+export const Footer: React.FC = () => {
   return (
-    <footer id="footer" className="relative py-16 px-6 border-t border-white/5">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center gap-4 mb-8"
-        >
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.label}
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center text-muted hover:text-foreground hover:border-accent/40 hover:shadow-[0_0_20px_rgba(124,58,237,0.2)] transition-all duration-300 hover:-translate-y-1"
-            >
-              <link.icon className="w-5 h-5" />
-            </a>
-          ))}
-        </motion.div>
+    <footer className="bg-[#111111] text-gray-300 pt-16 pb-12 border-t border-white/10 text-sm">
+      <Container className="relative z-10">
+        {/* 3-Column Desktop Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
+          {/* Column 1: Brand & Tagline */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="w-10 h-10 rounded-full bg-[#FF7A2F] text-white font-extrabold flex items-center justify-center text-sm shadow-md">
+                {portfolioConfig.initials}
+              </span>
+              <div>
+                <h3 className="text-white font-bold text-lg leading-tight">{portfolioConfig.name}</h3>
+                <p className="text-xs text-[#FF7A2F] font-semibold">{portfolioConfig.roles.firstLine}</p>
+              </div>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              {portfolioConfig.tagline}
+            </p>
+          </div>
 
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted text-sm mb-2"
-        >
-          Built with{" "}
-          <Heart className="inline w-3.5 h-3.5 text-rose-400 fill-rose-400" />{" "}
-          using Next.js, Tailwind CSS & Framer Motion
-        </motion.p>
+          {/* Column 2: Quick Links */}
+          <div className="space-y-3">
+            <h4 className="text-xs uppercase tracking-widest text-[#FF7A2F] font-bold">
+              Quick Links
+            </h4>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li>
+                <a href="#home" className="hover:text-[#FF7A2F] transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="#about" className="hover:text-[#FF7A2F] transition-colors">About</a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-[#FF7A2F] transition-colors">Services ({portfolioConfig.agencyName})</a>
+              </li>
+              <li>
+                <a href="#skills" className="hover:text-[#FF7A2F] transition-colors">Skills &amp; Expertise</a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-[#FF7A2F] transition-colors">Contact</a>
+              </li>
+              <li>
+                <a href="#resume" className="hover:text-[#FF7A2F] transition-colors">Resume</a>
+              </li>
+            </ul>
+          </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-muted/60 text-xs"
-        >
-          &copy; {new Date().getFullYear()} Neel Sheth. All rights reserved.
-        </motion.p>
-      </div>
+          {/* Column 3: Location & Availability */}
+          <div className="space-y-3">
+            <h4 className="text-xs uppercase tracking-widest text-[#FF7A2F] font-bold">
+              Locations &amp; Reach
+            </h4>
+            <div className="flex items-start gap-2 text-xs sm:text-sm text-gray-300">
+              <MapPin className="w-4 h-4 text-[#FF7A2F] shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-white">
+                  {portfolioConfig.locations.primary} <span className="text-[#FF7A2F]">↕</span> {portfolioConfig.locations.secondary}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">{portfolioConfig.locations.note}</p>
+              </div>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-[#FF7A2F] font-semibold mt-2">
+              <span className="w-2 h-2 rounded-full bg-[#FF7A2F] animate-pulse" />
+              <span>Available for Remote Projects Worldwide</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+          <p>© {new Date().getFullYear()} {portfolioConfig.name}. All rights reserved.</p>
+          <p>
+            Designed &amp; Engineered with <span className="text-[#FF7A2F]">❤️</span> using Next.js &amp; TypeScript.
+          </p>
+        </div>
+      </Container>
     </footer>
   );
-}
+};
