@@ -16,6 +16,17 @@ export const Hero: React.FC = () => {
       className="relative pt-24 sm:pt-32 pb-12 overflow-hidden bg-[#0B0F17] text-[#F3F4F6]"
     >
       <Container className="relative z-10 text-center">
+        {/* Availability Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF7A2F]/10 border border-[#FF7A2F]/30 text-[#FF7A2F] text-xs sm:text-sm font-semibold mb-6"
+        >
+          <span className="w-2 h-2 rounded-full bg-[#FF7A2F] animate-ping" />
+          <span>Open to Internships • Freelance Projects • Collaborations</span>
+        </motion.div>
+
         {/* Large Bold Heading Scale */}
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
@@ -52,7 +63,7 @@ export const Hero: React.FC = () => {
           {portfolioConfig.subtitle}
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* Conversion CTA Buttons */}
         <HeroButtons />
 
         {/* Symmetrical Hero Image & Semicircle with Floating Tech Badges */}
