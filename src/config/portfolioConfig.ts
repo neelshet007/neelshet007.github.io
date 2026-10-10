@@ -13,7 +13,7 @@ export const portfolioConfig = {
   
   // Centralized URLs
   links: {
-    resume: "https://drive.google.com/drive/folders/1FiOkIy0hQzonJgnw_hXAdcrYF8xnttPA",
+    resume: "https://drive.google.com/drive/folders/1jb5O_J-Na8A0ddaL1SKQHEiZ1OlwgP5_?usp=sharing",
     github: "https://github.com/neelshet007",
     linkedin: "https://www.linkedin.com/in/neelsheth2007",
     techInstagram: "https://www.instagram.com/neel_sheth2007",
@@ -36,7 +36,7 @@ export const portfolioConfig = {
     note: "Working between both locations. Open for Remote Opportunities & Projects.",
   },
   socialLinks: [
-    { name: "Resume", href: "https://drive.google.com/drive/folders/1FiOkIy0hQzonJgnw_hXAdcrYF8xnttPA", iconName: "FileText" },
+    { name: "Resume", href: "https://drive.google.com/drive/folders/1jb5O_J-Na8A0ddaL1SKQHEiZ1OlwgP5_?usp=sharing", iconName: "FileText" },
     { name: "GitHub", href: "https://github.com/neelshet007", iconName: "Github" },
     { name: "LinkedIn", href: "https://www.linkedin.com/in/neelsheth2007", iconName: "Linkedin" },
     { name: "NexScale", href: "https://nexscale-psi.vercel.app/", iconName: "Globe" },
