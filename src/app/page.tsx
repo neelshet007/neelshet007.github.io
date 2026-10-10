@@ -18,14 +18,14 @@ export default function Home() {
       {/* Hero Section + 6 Social Platform Grid */}
       <Hero />
 
-      {/* About Me Section */}
+      {/* About Me Section (Background & Journey) */}
       <About />
+
+      {/* Skills & Technologies Categorized Grid (DevOps & Cloud First) */}
+      <SkillsExpertise />
 
       {/* What I Build Minimal Focus Cards */}
       <WhatIBuild />
-
-      {/* Skills & Technologies Categorized Grid (Moved ABOVE Projects) */}
-      <SkillsExpertise />
 
       {/* Featured Projects Case Studies */}
       <ProjectsSection />

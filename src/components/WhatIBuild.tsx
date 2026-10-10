@@ -36,7 +36,7 @@ const buildAreas: WhatIBuildCard[] = [
 
 export const WhatIBuild: React.FC = () => {
   return (
-    <section className="relative bg-[#0B0F17] text-[#F3F4F6] py-20 sm:py-28 overflow-hidden">
+    <section className="relative bg-[#0F141F] text-[#F3F4F6] py-20 sm:py-28 overflow-hidden border-t border-b border-gray-800/80">
       <Container className="relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-18">
           <motion.span
