@@ -7,7 +7,7 @@ export const portfolioConfig = {
   initials: "NS",
   brandName: "NEEL",
   agencyName: "NexScale",
-  tagline: "Junior Full Stack & DevOps Engineer | Tech Content Creator",
+  tagline: "Full Stack Engineer • DevOps & Cloud Engineer • Open Source Enthusiast",
   profileImageUrl: "https://drive.google.com/file/d/1qc9jSBre58SyvO813AckNOTPn0kgrRGJ/view?usp=drive_link",
   whatsappNumber: "917709215976",
   
@@ -19,14 +19,17 @@ export const portfolioConfig = {
     techInstagram: "https://www.instagram.com/neel_sheth2007",
     vlogInstagram: "https://www.instagram.com/neel_afterhours",
     nexscale: "https://nexscale-psi.vercel.app/",
+    contact: "https://neelshet007.github.io/#contact",
   },
 
   roles: {
     firstLine: "Full Stack Engineer",
-    secondLine: "DevOps & Cloud",
+    secondLine: "DevOps & Cloud Engineer",
+    thirdLine: "Open Source Enthusiast",
+    fullTitle: "Full Stack Engineer • DevOps & Cloud Engineer • Open Source Enthusiast",
   },
   subtitle:
-    "I'm a junior engineer building scalable applications, cloud infrastructure, AI-powered automation, and algorithmic trading systems while creating technical content.",
+    "I'm a junior engineer building scalable applications, cloud infrastructure, AI-powered automation, and algorithmic trading systems — while exploring open source and creating technical content.",
   locations: {
     primary: "Dadar, Mumbai",
     secondary: "Lonere, Raigad",

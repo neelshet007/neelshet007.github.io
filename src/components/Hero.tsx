@@ -21,13 +21,15 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF7A2F]/10 border border-[#FF7A2F]/30 text-[#FF7A2F] text-xs sm:text-sm font-semibold mb-6"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF7A2F]/10 border border-[#FF7A2F]/30 text-[#FF7A2F] text-xs sm:text-sm font-semibold mb-6 max-w-[95vw] text-center"
         >
-          <span className="w-2 h-2 rounded-full bg-[#FF7A2F] animate-ping" />
-          <span>Open to Internships • Freelance Projects • Collaborations</span>
+          <span className="w-2 h-2 rounded-full bg-[#FF7A2F] animate-ping shrink-0" />
+          <span className="leading-snug">
+            Open to Internships • Freelance Projects • Collaborations • Full-Time Opportunities
+          </span>
         </motion.div>
 
-        {/* Large Bold Heading Scale */}
+        {/* Large Bold Greeting Scale */}
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,24 +43,30 @@ export const Hero: React.FC = () => {
           </span>
         </motion.h1>
 
-        <motion.h1
+        {/* Main Title: Full Stack Engineer • DevOps & Cloud Engineer • Open Source Enthusiast */}
+        <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-2 sm:mt-3 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none text-white"
+          className="mt-3 sm:mt-5 max-w-5xl mx-auto"
         >
-          <span className="block">{portfolioConfig.roles.firstLine}</span>
-          <span className="text-[#FF7A2F] block mt-1 sm:mt-2">
-            {portfolioConfig.roles.secondLine}
-          </span>
-        </motion.h1>
+          <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-3 gap-y-1">
+            <span>{portfolioConfig.roles.firstLine}</span>
+            <span className="text-[#FF7A2F] font-bold">•</span>
+            <span>{portfolioConfig.roles.secondLine}</span>
+            <span className="text-[#FF7A2F] font-bold hidden sm:inline">•</span>
+            <span className="text-[#FF7A2F] block sm:inline w-full sm:w-auto mt-1 sm:mt-0">
+              {portfolioConfig.roles.thirdLine}
+            </span>
+          </div>
+        </motion.div>
 
-        {/* Subtitle */}
+        {/* Improved Description Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="max-w-2xl mx-auto mt-6 text-base sm:text-lg md:text-xl text-gray-400 leading-relaxed font-medium"
+          className="max-w-3xl mx-auto mt-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed font-normal"
         >
           {portfolioConfig.subtitle}
         </motion.p>

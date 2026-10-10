@@ -15,19 +15,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Neel | Junior Full Stack & DevOps Engineer",
+  title: "Neel | Full Stack Engineer • DevOps & Cloud Engineer • Open Source Enthusiast",
   description:
-    "Portfolio of Neel, Junior Full Stack Engineer & DevOps Specialist building scalable cloud infrastructure, web apps, and AI automation.",
+    "I'm a junior engineer building scalable applications, cloud infrastructure, AI-powered automation, and algorithmic trading systems — while exploring open source and creating technical content.",
   keywords: [
     "Neel",
-    "DevOps Engineer",
     "Full Stack Engineer",
+    "DevOps Engineer",
+    "Cloud Engineer",
+    "Open Source Enthusiast",
     "Cloud Infrastructure",
     "Kubernetes",
     "Docker",
     "AWS",
     "Terraform",
     "CI/CD",
+    "Agentic AI",
+    "Algorithmic Trading",
   ],
   authors: [{ name: "Neel" }],
   icons: {
@@ -36,9 +40,9 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Neel | Junior Full Stack & DevOps Engineer",
+    title: "Neel | Full Stack Engineer • DevOps & Cloud Engineer • Open Source Enthusiast",
     description:
-      "Junior Full Stack Engineer & DevOps Specialist building scalable cloud infrastructure and deployment pipelines.",
+      "I'm a junior engineer building scalable applications, cloud infrastructure, AI-powered automation, and algorithmic trading systems — while exploring open source and creating technical content.",
     type: "website",
   },
 };

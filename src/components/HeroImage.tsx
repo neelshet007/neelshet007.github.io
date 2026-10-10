@@ -6,28 +6,30 @@ import { ProfileImage } from "./ProfileImage";
 import { FloatingBadge } from "./FloatingBadge";
 import { portfolioConfig } from "@/config/portfolioConfig";
 import {
+  GitPullRequest,
+  Terminal,
   Server,
   Layers,
-  Terminal,
   Cloud,
-  Container as DockerIcon,
-  GitBranch,
-  Cpu,
-  Boxes,
   Bot,
   Sparkles,
   Brain,
   Workflow,
+  Cpu,
+  Container as DockerIcon,
+  GitBranch,
+  Zap,
+  Boxes,
   Code2,
   Database,
   TrendingUp,
   LineChart,
   Activity,
-  ShieldCheck,
 } from "lucide-react";
 
 export const HeroImage: React.FC = () => {
   const leftBadges = [
+    { label: "Open Source", icon: <GitPullRequest className="w-4 h-4" /> },
     { label: "DevOps", icon: <Terminal className="w-4 h-4" /> },
     { label: "AWS", icon: <Server className="w-4 h-4" /> },
     { label: "Kubernetes", icon: <Layers className="w-4 h-4" /> },
@@ -37,39 +39,38 @@ export const HeroImage: React.FC = () => {
     { label: "Generative AI", icon: <Sparkles className="w-4 h-4" /> },
     { label: "LLMs", icon: <Brain className="w-4 h-4" /> },
     { label: "LangGraph", icon: <Workflow className="w-4 h-4" /> },
-    { label: "MCP", icon: <Cpu className="w-4 h-4" /> },
   ];
 
   const rightBadges = [
+    { label: "MCP", icon: <Cpu className="w-4 h-4" /> },
     { label: "Docker", icon: <DockerIcon className="w-4 h-4" /> },
     { label: "CI/CD", icon: <GitBranch className="w-4 h-4" /> },
-    { label: "Automation", icon: <Cpu className="w-4 h-4" /> },
+    { label: "Automation", icon: <Zap className="w-4 h-4" /> },
     { label: "Terraform", icon: <Boxes className="w-4 h-4" /> },
     { label: "Full Stack", icon: <Code2 className="w-4 h-4" /> },
     { label: "Backend", icon: <Database className="w-4 h-4" /> },
     { label: "Algorithmic Trading", icon: <TrendingUp className="w-4 h-4" /> },
     { label: "Trading Systems", icon: <LineChart className="w-4 h-4" /> },
-    { label: "Monitoring", icon: <Activity className="w-4 h-4" /> },
-    { label: "Infrastructure", icon: <ShieldCheck className="w-4 h-4" /> },
+    { label: "Monitoring & Infrastructure", icon: <Activity className="w-4 h-4" /> },
   ];
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto mt-8 sm:mt-12 flex flex-col md:flex-row items-center justify-between gap-6 px-4">
-      {/* Symmetrical Left Skill Badges Stack */}
-      <div className="hidden md:flex flex-col gap-2.5 items-end w-1/4 z-30 max-h-[480px] overflow-visible">
+    <div className="relative w-full max-w-6xl xl:max-w-7xl mx-auto mt-8 sm:mt-12 flex flex-col lg:flex-row items-center justify-between gap-4 xl:gap-8 px-4">
+      {/* Symmetrical Left Skill Badges Stack (Desktop) */}
+      <div className="hidden lg:flex flex-col gap-2 xl:gap-2.5 items-end w-[240px] xl:w-[280px] z-30">
         {leftBadges.map((badge, idx) => (
           <FloatingBadge
             key={badge.label}
             label={badge.label}
             icon={badge.icon}
             side="left"
-            delay={0.1 * idx}
+            delay={0.04 * idx}
           />
         ))}
       </div>
 
       {/* Centered Image Frame */}
-      <div className="relative w-full max-w-sm sm:max-w-md md:w-2/4 flex justify-center items-end">
+      <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-auto flex justify-center items-end mx-auto">
         {/* Decorative Greeting Spark */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -90,7 +91,7 @@ export const HeroImage: React.FC = () => {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-t-full bg-[#FF7A2F] flex items-end justify-center shadow-2xl shadow-[#FF7A2F]/25 overflow-hidden border-4 border-[#FF7A2F]"
+          className="relative w-72 h-72 sm:w-80 sm:h-80 xl:w-96 xl:h-96 rounded-t-full bg-[#FF7A2F] flex items-end justify-center shadow-2xl shadow-[#FF7A2F]/25 overflow-hidden border-4 border-[#FF7A2F]"
         >
           <div className="relative w-full h-full z-20">
             <ProfileImage
@@ -101,30 +102,41 @@ export const HeroImage: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Symmetrical Right Skill Badges Stack */}
-      <div className="hidden md:flex flex-col gap-4 items-start w-1/4 z-30 max-h-[480px] overflow-visible">
+      {/* Symmetrical Right Skill Badges Stack (Desktop) */}
+      <div className="hidden lg:flex flex-col gap-2 xl:gap-2.5 items-start w-[240px] xl:w-[280px] z-30">
         {rightBadges.map((badge, idx) => (
           <FloatingBadge
             key={badge.label}
             label={badge.label}
             icon={badge.icon}
             side="right"
-            delay={0.1 * idx}
+            delay={0.04 * idx}
           />
         ))}
       </div>
 
-      {/* Mobile Skill Badges Flow Grid */}
-      <div className="md:hidden flex flex-wrap justify-center gap-2 mt-6 z-30">
-        {[...leftBadges, ...rightBadges].map((badge, idx) => (
-          <FloatingBadge
-            key={badge.label}
-            label={badge.label}
-            icon={badge.icon}
-            side="left"
-            delay={0.05 * idx}
-          />
-        ))}
+      {/* Mobile & Tablet Clean Responsive Skill Layout */}
+      <div className="lg:hidden w-full max-w-2xl mx-auto mt-8 px-2 z-30">
+        <div className="flex flex-wrap justify-center gap-2">
+          {leftBadges.map((badge, idx) => (
+            <FloatingBadge
+              key={badge.label}
+              label={badge.label}
+              icon={badge.icon}
+              side="left"
+              delay={0.02 * idx}
+            />
+          ))}
+          {rightBadges.map((badge, idx) => (
+            <FloatingBadge
+              key={badge.label}
+              label={badge.label}
+              icon={badge.icon}
+              side="right"
+              delay={0.02 * (idx + leftBadges.length)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

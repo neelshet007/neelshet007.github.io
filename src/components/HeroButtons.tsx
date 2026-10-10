@@ -29,10 +29,18 @@ export const HeroButtons: React.FC = () => {
         <span>Hire Me</span>
       </button>
 
-      {/* Secondary Glass Button - "Let's Connect" smoothly scrolling to Contact section */}
+      {/* Secondary Glass Button - "Let's Connect" navigating to https://neelshet007.github.io/#contact */}
       <a
-        href="#contact"
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#111827] border border-gray-700 text-white font-bold text-sm sm:text-base hover:bg-gray-800 hover:border-gray-600 hover:scale-105 transition-all duration-200 shadow-md"
+        href="https://neelshet007.github.io/#contact"
+        onClick={(e) => {
+          const contactElement = document.getElementById("contact");
+          if (contactElement) {
+            e.preventDefault();
+            contactElement.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", "#contact");
+          }
+        }}
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-[#111827] border border-gray-700 text-white font-bold text-sm sm:text-base hover:bg-gray-800 hover:border-gray-600 hover:scale-105 transition-all duration-200 shadow-md cursor-pointer"
       >
         <span>Let&apos;s Connect</span>
         <ArrowDown className="w-4 h-4 text-[#FF7A2F]" />
