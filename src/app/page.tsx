@@ -1,8 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { WhatIBuild } from "@/components/WhatIBuild";
+import { ExperienceSection } from "@/components/ExperienceSection";
 import { SkillsExpertise } from "@/components/SkillsExpertise";
+import { WhatIBuild } from "@/components/WhatIBuild";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { EducationSection } from "@/components/EducationSection";
 import { NexScaleCTA } from "@/components/NexScaleCTA";
@@ -20,6 +21,9 @@ export default function Home() {
 
       {/* About Me Section (Background & Journey) */}
       <About />
+
+      {/* Experience — DJCSI */}
+      <ExperienceSection />
 
       {/* Skills & Technologies Categorized Grid (DevOps & Cloud First) */}
       <SkillsExpertise />
