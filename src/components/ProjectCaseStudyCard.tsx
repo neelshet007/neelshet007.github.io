@@ -138,31 +138,33 @@ export const ProjectCaseStudyCard: React.FC<ProjectCaseStudyCardProps> = ({
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-3 pt-3">
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FF7A2F] text-white font-bold text-xs sm:text-sm shadow-md hover:bg-[#FF7A2F]/90 hover:scale-105 transition-all"
-              >
-                <span>View Project</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            )}
+          {(project.demoUrl || project.githubUrl) && (
+            <div className="flex flex-wrap items-center gap-3 pt-3">
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FF7A2F] text-white font-bold text-xs sm:text-sm shadow-md hover:bg-[#FF7A2F]/90 hover:scale-105 transition-all"
+                >
+                  <span>View Project</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
 
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gray-800 border border-gray-700 text-white font-bold text-xs sm:text-sm hover:bg-gray-700 hover:scale-105 transition-all"
-              >
-                <Github className="w-4 h-4" />
-                <span>GitHub</span>
-              </a>
-            )}
-          </div>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gray-800 border border-gray-700 text-white font-bold text-xs sm:text-sm hover:bg-gray-700 hover:scale-105 transition-all"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>GitHub</span>
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>

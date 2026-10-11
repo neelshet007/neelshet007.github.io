@@ -36,6 +36,7 @@ const skillCategories: SkillCategory[] = [
       "Node.js",
       "Express",
       "MongoDB",
+      "DBMS (Database Management Systems)",
     ],
   },
   {

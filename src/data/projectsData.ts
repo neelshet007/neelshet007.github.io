@@ -75,6 +75,34 @@ export const projectsData: Project[] = [
     typeIconName: "Activity",
   },
   {
+    id: "kodekloud-sysadmin",
+    title: "System Administrator @ KodeKloud Engineer",
+    categoryBadge: "System Administration & DevOps",
+    description:
+      "Completed hands-on, scenario-based system administration and DevOps engineering tasks in a practical learning environment.",
+    engineeringHighlights: [
+      "Gained practical experience troubleshooting Linux servers.",
+      "Worked on Docker containerization.",
+      "Practiced Kubernetes cluster management.",
+      "Gained experience with CI/CD pipeline workflows.",
+    ],
+    techStack: [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "System Administration",
+    ],
+    metrics: [
+      "Scenario-Based Tasks",
+      "Linux Server Admin",
+      "Containerization",
+      "Cluster Operations",
+    ],
+    imagePlaceholderBg: "from-[#F97316]/20 to-[#111827]",
+    typeIconName: "Server",
+  },
+  {
     id: "kisan-alert",
     title: "Kisan Alert – AI-Powered Agricultural Intelligence Platform",
     categoryBadge: "🏆 National Hackathon Project",
